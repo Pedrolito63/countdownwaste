@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compteur Gaspillage Alimentaire US 2025 - Trackt00</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .counter-container {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+        }
+        .counter-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .counter-value {
+            font-size: 48px;
+            font-weight: bold;
+            color: #ff6347; /* Rouge tomate pour l'impact */
+            margin: 10px 0;
+        }
+        .counter-unit {
+            font-size: 18px;
+            color: #666;
+        }
+        .counter-note {
+            font-size: 14px;
+            color: #888;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="counter-container">
+        <div class="counter-title">Gaspillage alimentaire accumulé aux US depuis le 1er janvier 2025</div>
+        <div class="counter-value" id="wasteCounter">0</div>
+        <div class="counter-unit">tonnes</div>
+        <div class="counter-note">Basé sur ~66 millions de tonnes par an (estimations EPA/ReFED 2025). Réduisons ça avec Trackt00 !</div>
+    </div>
+
+    <script>
+        // Configuration (ajuste ici si besoin)
+        const annualWasteTons = 66000000; // Total annuel en tonnes (source: EPA/ReFED)
+        const startDate = new Date('2025-01-01T00:00:00'); // Début de l'année
+
+        // Calcul du taux par seconde
+        const secondsInYear = 365.25 * 24 * 60 * 60; // Compte les années bissextiles
+        const wastePerSecond = annualWasteTons / secondsInYear;
+
+        // Fonction pour mettre à jour le compteur
+        function updateCounter() {
+            const now = new Date();
+            const elapsedSeconds = (now - startDate) / 1000; // Temps écoulé en secondes
+            let accumulatedWaste = Math.floor(wastePerSecond * elapsedSeconds); // Arrondi à l'entier inférieur
+
+            // Formatage avec séparateurs de milliers (ex. : 1,234,567)
+            accumulatedWaste = accumulatedWaste.toLocaleString('en-US');
+
+            document.getElementById('wasteCounter').textContent = accumulatedWaste;
+        }
+
+        // Mise à jour initiale
+        updateCounter();
+
+        // Mise à jour toutes les secondes
+        setInterval(updateCounter, 1000);
+    </script>
+</body>
+</html>
+Ajout du compteur de gaspillage
