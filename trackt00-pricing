@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trackt00 Pricing - Automate Your Inventory</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #1e90ff;
+            color: white;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .pricing-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .pricing-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .pricing-card:hover {
+            transform: translateY(-5px);
+        }
+        .pricing-card h2 {
+            color: #1e90ff;
+            margin: 10px 0;
+        }
+        .pricing-card .price {
+            font-size: 2em;
+            color: #ff4500;
+            margin: 10px 0;
+        }
+        .pricing-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        .pricing-card ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .pricing-card .cta {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #1e90ff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .pricing-card .cta:hover {
+            background-color: #104e8b;
+        }
+        .recommended {
+            border: 2px solid #ff4500;
+        }
+        @media (max-width: 768px) {
+            .pricing-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Trackt00 Pricing Plans</h1>
+        <p>Automate your inventory with RFID technology – Choose the plan that fits your needs.</p>
+    </div>
+    <div class="pricing-container">
+        <div class="pricing-card">
+            <h2>Basic</h2>
+            <div class="price">$340/month (US) / €230/month (EU)</div>
+            <ul>
+                <li>Connected RFID Shelf + Zebra ZQ511r Printer</li>
+                <li>500 RFID Tags included ($0.09/US, €0.07/EU each)</li>
+                <li>Real-time Inventory Tracking</li>
+                <li>Basic Dashboard Integration</li>
+                <li>Standard Support (Email)</li>
+                <li><strong>Deposit:</strong> $1200 (US) / €800 (EU)</li>
+            </ul>
+            <a href="#" class="cta">Get Started</a>
+        </div>
+        <div class="pricing-card recommended">
+            <h2>Pro <span style="color: #ff4500;">(Recommended)</span></h2>
+            <div class="price">$360/month (US) / €250/month (EU)</div>
+            <ul>
+                <li>All Basic Features</li>
+                <li>1000 RFID Tags included</li>
+                <li>Advanced Dashboard (Custom Reports)</li>
+                <li>POS Integration (e.g., Toast)</li>
+                <li>Priority Email Support</li>
+                <li><strong>Deposit:</strong> $1200 (US) / €800 (EU)</li>
+            </ul>
+            <a href="#" class="cta">Get Started</a>
+        </div>
+        <div class="pricing-card">
+            <h2>Premium</h2>
+            <div class="price">$380/month (US) / €270/month (EU)</div>
+            <ul>
+                <li>All Pro Features</li>
+                <li>Unlimited RFID Tags</li>
+                <li>24/7 Premium Support + On-site SAV</li>
+                <li>AI-Powered Stock Predictions (Beta)</li>
+                <li>Blockchain Traceability (Future Roadmap)</li>
+                <li><strong>Deposit:</strong> $1200 (US) / €800 (EU)</li>
+            </ul>
+            <a href="#" class="cta">Get Started</a>
+        </div>
+    </div>
+</body>
+</html>
